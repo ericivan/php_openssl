@@ -2,7 +2,7 @@
 
 $data = 'my signature data';
 
-$passphrase = '';
+$passphrase = 'mysecret';
 
 $digestAlgo = 'sha512';
 
@@ -10,7 +10,7 @@ $algo = OPENSSL_ALGO_SHA1;
 
 $privateKeyFile = './id_rsa';
 
-$privateKey = openssl_pkey_get_private(file_get_contents($privateKeyFile));
+$privateKey = openssl_pkey_get_private(file_get_contents($privateKeyFile),$passphrase);
 
 if (function_exists("hash")) {
     $digest = hash($digestAlgo, $data, TRUE);
