@@ -2,7 +2,7 @@
 openssl genrsa -out id_rsa 1024
 
 #利用秘钥生成公钥
-openssl rsa -in id_rsa pubout -out id_rsa.pub
+openssl rsa -in id_rsa -pubout -out id_rsa.pub
 
 
 
