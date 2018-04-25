@@ -2,7 +2,7 @@
 openssl genrsa -out id_rsa 1024
 
 #利用秘钥生成公钥
-openssl rsa -in private.pem pubout -out id_rsa.pub
+openssl rsa -in id_rsa pubout -out id_rsa.pub
 
 
 
@@ -10,5 +10,5 @@ openssl rsa -in private.pem pubout -out id_rsa.pub
 openssl genrsa -aes128 -passout pass:mysecret -out id_rsa 2048
 
 #生成公钥
-openssl rsa -in private.pem -passin pass:mysecret -pubout -out id_rsa.pub
+openssl rsa -in id_rsa -passin pass:mysecret -pubout -out id_rsa.pub
 
