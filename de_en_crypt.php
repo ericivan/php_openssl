@@ -16,9 +16,9 @@ var_dump($encryptedData);
 
 $privateKeyFile='./id_rsa';
 
-$privateKey=openssl_pkey_get_private(file_get_contents($privateKeyFile));
-
 $passphrase='';
+
+$privateKey=openssl_pkey_get_private(file_get_contents($privateKeyFile));
 
 $sensitiveData='';
 
